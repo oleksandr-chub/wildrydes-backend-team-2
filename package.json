@@ -1,0 +1,12 @@
+{
+  "name": "wildrydes-backend-team-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sls": "serverless"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
