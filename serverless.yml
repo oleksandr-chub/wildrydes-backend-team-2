@@ -83,8 +83,15 @@ functions:
               Fn::GetAtt:
                 - UserPool
                 - Arn
-#    The following are a few example events you can configure
-#    NOTE: Please make sure to change your handler code to work with those events
+  postAuthentication:
+    handler: functions/post_authentication.handler
+    events:
+      - cognitoUserPool:
+          pool: ${self:custom.userPoolName}
+          trigger: PostAuthentication
+          existing: true
+                    #    The following are a few example events you can configure
+                    #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
 #    events:
 #      - http:
